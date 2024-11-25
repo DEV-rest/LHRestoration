@@ -67,7 +67,7 @@ const HomePage = () => {
   return (
     <><CoverSection>
       <ContentContainer>
-        <h1>Welcome to Longhorn Restoration</h1>
+        <h1>Welcome to Longhorn Restorationssss</h1>
         <p>
           We provide expert restoration services with a commitment to quality and care. Let us bring your projects to life with precision and passion.
         </p>
