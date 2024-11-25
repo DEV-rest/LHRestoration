@@ -8,8 +8,8 @@ const CoverSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  height: 80vh;
+  padding: 5px;
+  height: 45vh;
   background-color: #5a8293; /* Off-white background */
   
   @media (max-width: 768px) {
@@ -26,8 +26,8 @@ const ImageContainer = styled.div`
   img {
     max-width: 80%;
     height: auto;
-    border-radius: 10px; /* Optional rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding-right: 200px;
+    
   }
 `;
 
@@ -37,7 +37,7 @@ const ContentContainer = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    color: #2d3e50; /* Navy blue for heading */
+    color:  #ffa500; /* Navy blue for heading */
     margin-bottom: 20px;
   }
 
@@ -76,7 +76,7 @@ const HomePage = () => {
       <ImageContainer>
         <img src={coverImage} alt="Cover" />
       </ImageContainer>
-    </CoverSection><SketchfabEmbed /></>
+    </CoverSection></>
   );
 };
 

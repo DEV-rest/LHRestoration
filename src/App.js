@@ -6,6 +6,7 @@ import ServicesPage from './Pages/ServicesPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import SketchfabEmbed from "./Components/Sketchfab/SketchfabEmbed";
+import GlobalStyles from './Styles/GlobalStyles';
 
 const App = () => {
   return (
