@@ -6,7 +6,7 @@ import logo from '../Assets/logo.png';
 // Styled components
 const NavbarContainer = styled.nav`
   background-color: #f2f3f5; /* Light gray background */
-  padding: 10px 20px;
+  padding: 1px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,0 +1,112 @@
+/* Custom Fonts */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../../public/fonts/AnkhSanctuary-PVK0B.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyCustomFont5';
+  src: url('../../public/fonts/Chopsic-K6Dp.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont4';
+  src: url('../../public/fonts/Acetone-w1gn6.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont6';
+  src: url('../../public/fonts/Valorax-lg25V.otf') format('truetype');
+}
+
+/* Home Page Styling */
+.homepage-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65vh;
+  padding: 20px;
+  background-color: #5a8293;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Info Box with Custom Font */
+.info-box {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Enable flexbox for centering */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'MyCustomFont', sans-serif; /* Applying the custom font */
+  
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.info-box h1 {
+  font-size: 2.5rem;
+  color: rgb(185, 209, 212);
+  margin-bottom: 10px;
+  font-family: 'MyCustomFont5', sans-serif; /* Another custom font */
+}
+
+.info-box p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+  font-family: 'MyCustomFont4', sans-serif;
+}
+
+.info-box button {
+  background-color: #a63c06;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px; /* Updated rounded corners */
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'MyCustomFont5', sans-serif; /* Applying the custom font */
+  margin-top: 20px; /* Add spacing above the button if needed */
+}
+
+.info-box button:hover {
+  background-color: #5a8293;
+  transform: scale(1.05);
+}
+
+/* Model Container Placeholder */
+.model-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.model-placeholder {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: 'MyCustomFont4', sans-serif;
+}
