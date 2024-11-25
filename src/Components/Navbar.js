@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../Assets/logo.png';git 
+import logo from '../Assets/logo.png';
 
 // Styled components
 const NavbarContainer = styled.nav`
