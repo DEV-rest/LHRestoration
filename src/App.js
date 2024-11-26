@@ -5,8 +5,8 @@ import HomePage from './Pages/HomePage';
 import ServicesPage from './Pages/ServicesPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
-import SketchfabEmbed from "./Components/Sketchfab/SketchfabEmbed";
-import GlobalStyles from './Styles/GlobalStyles';
+import Footer from "./Components/Footer";
+
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

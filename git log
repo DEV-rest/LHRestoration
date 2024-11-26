@@ -1,0 +1,18 @@
+[33m295606b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mDalay[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m295606b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mDalay[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{1}: pull origin main: Fast-forward
+[33m70bc1cb[m HEAD@{2}: pull origin main: Fast-forward
+[33m65986de[m[33m ([m[1;31morigin/Dalay[m[33m, [m[1;32mmain[m[33m)[m HEAD@{3}: checkout: moving from main to Dalay
+[33m65986de[m[33m ([m[1;31morigin/Dalay[m[33m, [m[1;32mmain[m[33m)[m HEAD@{4}: Branch: renamed refs/heads/main to refs/heads/main
+[33m65986de[m[33m ([m[1;31morigin/Dalay[m[33m, [m[1;32mmain[m[33m)[m HEAD@{6}: commit: Your commit message describing changes
+[33mf38bae2[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{7}: checkout: moving from master to main
+[33mf38bae2[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{8}: checkout: moving from main to master
+[33mf38bae2[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{9}: reset: moving to master
+[33mba87848[m HEAD@{10}: checkout: moving from main to main
+[33mba87848[m HEAD@{11}: checkout: moving from main to main
+[33mba87848[m HEAD@{12}: checkout: moving from master to main
+[33mf38bae2[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{13}: commit: Second commit
+[33md9783d1[m HEAD@{14}: checkout: moving from main to master
+[33mba87848[m HEAD@{15}: commit: first commit
+[33m567cb62[m HEAD@{16}: checkout: moving from master to main
+[33md9783d1[m HEAD@{17}: commit: first commit
+[33mf54e413[m HEAD@{18}: commit (initial): Initialize project using Create React App

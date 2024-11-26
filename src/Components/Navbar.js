@@ -62,7 +62,7 @@ const EmergencyButton = styled.a`
 `;
 
 const NavBarContents = styled.div`
-  background-color: #5a8293; /* Dark blue for navbar look */
+  background-color: #191970; /* Dark blue for navbar look */
   padding: 10px 20px;
   width: 100%; /* Full width for bar-like appearance */
   display: flex;
@@ -89,7 +89,7 @@ const NavItem = styled(Link)`
   transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 
   &:hover {
-    color: #ffa500; /* Highlight on hover */
+    color: #6495ED; /* Highlight on hover */
     text-decoration: underline;
   }
 `;
@@ -103,7 +103,9 @@ const Navbar = () => {
           <BrandName>Longhorn 
           <br/>Restoration</BrandName>
         </LogoContainer>
-        <EmergencyButton href="tel:+1234567890">Emergency Call: (123) 456-7890</EmergencyButton>
+        
+        <EmergencyButton  href="tel:+8172350569">(817) 235-0569</EmergencyButton>
+        
       </TopBar>
       <NavBarContents>
         <NavLinks>

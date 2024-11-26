@@ -1,0 +1,53 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between the "Who We Are" and "Why Us" sections */
+    padding: 2rem;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-direction: row; /* Make items side by side */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space text and image apart */
+    gap: 2rem; /* Space between text and image */
+  }
+  
+  .about-section.reverse {
+    flex-direction: row-reverse; /* Reverse layout for "Why Us" */
+  }
+  
+  .text-content {
+    flex: 1; /* Take up half the space */
+    max-width: 50%;
+  }
+  
+  .image-content {
+    flex: 1; /* Take up half the space */
+    max-width: 50%;
+    text-align: center; /* Center the image */
+  }
+  
+  .image-content img {
+    max-width: 40%; /* Scale the image to fit the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for effect */
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      text-align: center; /* Center text for small screens */
+    }
+  
+    .about-section.reverse {
+      flex-direction: column; /* Ensure both sections stack similarly */
+    }
+  
+    .text-content,
+    .image-content {
+      max-width: 100%; /* Allow full width for smaller screens */
+    }
+  }
+  

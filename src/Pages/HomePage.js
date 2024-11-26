@@ -8,9 +8,10 @@ const HomePage = () => {
       {/* Left Section */}
       <div className="info-box">
         <h1>Longhorn Restoration</h1>
+        <h2>"Reviving Spaces, Restoring Strength"</h2>
         <p>
-          We provide expert restoration services with a commitment to quality and care.
-          Let us bring your projects to life with precision and passion.
+        We aim to revitalize homes and businesses by restoring water-damaged areas, breathing new life into wood surfaces, and ensuring the structural integrity of every project. 
+        With a commitment to quality and attention to detail, we bring spaces back to their original beauty and strength.
         </p>
         <button>Learn More</button>
       </div>
