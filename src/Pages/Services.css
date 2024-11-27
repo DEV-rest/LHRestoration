@@ -1,51 +1,240 @@
-.services-container {
-    padding: 2rem;
-    background-color: #f9f9f9;
+/* Container for all service cards */
+.service-container {
+  display: flex;
+  justify-content: space-between; /* Space between each card */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 20px; /* Add space between items (alternative to justify-content) */
+  padding: 20px; /* Optional: Add some padding around the container */
+  flex: 1;
+}
+
+/* Each service card styling */
+.service-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(25% - 20px); /* Adjust the width (25% for 4 cards per row) */
+  perspective: 1000px; /* Perspective for flip animation */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Optional: Lift effect on hover */
+}
+
+/* Card inner container for flip animation */
+.service-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Flip on hover */
+.service-card:hover .service-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back sides of the card */
+.service-card-front,
+.service-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px; /* Match border radius */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Front side */
+.service-card-front {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Back side */
+.service-card-back {
+  background-color: #6495ED;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Icon styling */
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Title styling */
+.service-title,
+.service-back-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Description styling */
+.service-description,
+.service-back-text {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .service-card {
+    width: calc(33.33% - 20px); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    width: 100%; /* 1 card per row */
   }
   
-  .our-services h2,
-  .testimonials h2 {
-    text-align: center;
-    color: #2f5233;
-  }
-  
-  .services-grid,
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-  
-  .service-card,
-  .testimonial-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .service-card .service-icon {
-    font-size: 2rem;
-    color: #2f5233;
-    margin-bottom: 0.5rem;
-  }
-  
-  .testimonial-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-  }
-  
-  .service-card h3,
-  .testimonial-card h3 {
-    color: #2f5233;
-  }
-  
-  .service-card p,
-  .testimonial-card p {
-    color: #555;
-  }
-  
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content-wrap {
+  flex: 1; /* Expands content area to push the footer */
+}
+
+/* Footer styling */
+.footer {
+  background-color: #003366; /* Example footer background */
+  color: white; /* Example footer text color */
+  padding: 20px;
+  text-align: center;
+}
+
+/* General container for testimonials */
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 400px;
+  flex: 1; /* Ensures this container expands */
+}
+
+/* Testimonial card styling */
+.testimonial-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(25% - 20px); /* Adjust the width (25% for 4 cards per row) */
+  perspective: 1000px; /* Perspective for flip animation */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px); /* Optional: Lift effect on hover */
+}
+
+/* Card inner container for flip animation */
+.testimonial-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Flip on hover */
+.testimonial-card:hover .testimonial-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back sides of the testimonial card */
+.testimonial-card-front,
+.testimonial-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Front side (image, name, and stars) */
+.testimonial-card-front {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Back side (feedback) */
+.testimonial-card-back {
+  background-color: #6495ED;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Styling for the review stars */
+.testimonial-stars {
+  font-size: 24px;
+  color: #FFD700; /* Gold color for stars */
+  margin-bottom: 10px;
+}
+
+/* Testimonial image styling */
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 10px;
+}
+
+/* Testimonial name styling */
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Feedback styling */
+.testimonial-feedback {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* General styling for section headings */
+.section-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Optional: set color to match your design */
+}
+
+/* Additional styles for spacing and layout */
+.services-section, .testimonials-section {
+  margin-bottom: 40px;
+}
+
+
+ 
