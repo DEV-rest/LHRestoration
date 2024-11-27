@@ -30,7 +30,10 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #2d4b9b; /* Blue background */
+  background-image: url('../Assets/background2.jpg');
+  background-repeat:no-repeat;/* Blue background */
+  background-size: cover;
+
   min-height: 100vh;
   gap: 20px; /* Space between sections */
   position: relative;
@@ -51,8 +54,8 @@
 .info-box {
   width: 70%; /* Wider info box */
   height: 400px; /* Increased height */
-  background: rgba(255, 255, 255, 0.7); /* Glass effect */
-  backdrop-filter: blur(15px); /* Enhanced blur effect */
+  background: rgba(173, 216, 230, 0.4); /* Glass effect */
+  backdrop-filter: blur(25px); /* Enhanced blur effect */
   padding: 90px; /* Increased padding for text */
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
@@ -70,14 +73,14 @@
 /* Info Box Heading Styles */
 .info-box h1 {
   font-size: 2.8rem; /* Larger heading */
-  color: #ffffff;
+  color: #1292e1;
   margin-bottom: 15px;
   font-family: 'MyCustomFont5', sans-serif;
   text-transform: uppercase; /* Uppercase text for emphasis */
 }
 .info-box h2 {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #36bfde;
   margin-bottom: 20px;
   font-family: 'MyCustomFont4', sans-serif;
   font-style: italic; /* Italicized subtitle */
@@ -85,14 +88,14 @@
 /* Info Box Paragraph */
 .info-box p {
   font-size: 1.4rem;
-  color: #ffffff;
+  color: #edad2d;
   line-height: 1.8;
   margin: 0;
   font-family: 'MyCustomFont4', sans-serif;
   transition: color 0.3s ease;
 }
 .info-box p:hover {
-  color: #d1e8f0; /* Subtle color change on hover */
+  color: #36bfde; /* Subtle color change on hover */
 }
 
 /* Info Box Button */
@@ -135,8 +138,8 @@
   width: 100%; /* Align width with info box */
   max-width: 1000px;
   height: 100px;
-  background: rgba(219, 202, 202, 0.7); /* Glass effect */
-  backdrop-filter: blur(10px); /* Subtle blur */
+  background: rgba(173, 216, 230, 0.4); /* Glass effect */
+  backdrop-filter: blur(20px); /* Subtle blur */
   margin-top: 10px; /* Reduced gap between info box and insurance section */
   padding: 10px 1px; /* Comfortable padding */
   border-radius: 20px; /* Rounded corners */
