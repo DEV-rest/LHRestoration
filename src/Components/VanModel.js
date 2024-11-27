@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Stage, Environment } from '@react-three/drei';
+import { OrbitControls, Stage } from '@react-three/drei';
 import Vansss from './Vanss'; 
 import * as THREE from 'three';
 
@@ -33,7 +33,7 @@ const AnimatedVan = () => {
     }
   }, []);
 
-  return <Vansss ref={modelRef} scale={0.5} />;
+  return <Vansss ref={modelRef} scale={0.6} />;
 };
 
 const VanModel = () => {
