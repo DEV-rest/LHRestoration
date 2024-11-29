@@ -14,8 +14,8 @@ const HomePage = () => {
       {/* Info Box and Model */}
       <div className="info-model-container">
         <div className="info-box">
-          <h1>Longhorn Restoration</h1>
-          <h2>"Reviving Spaces, Restoring Strength"</h2>
+        
+          <h1>"Reviving Spaces, Restoring Strength"</h1>
           <p>
             We aim to revitalize homes and businesses by restoring water-damaged areas, breathing new life into wood surfaces, and ensuring the structural integrity of every project.
           </p>
