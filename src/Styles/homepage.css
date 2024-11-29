@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'MyCustomFont6';
-  src: url('../../public/fonts/Valorax-lg25V.otf') format('truetype');
+  src: url('../../public/fonts/Cartesian-4B576.ttf') format('truetype');
 }
 
 
@@ -30,7 +30,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-image: url('../Assets/background2.jpg');
+  background-image: url('../Assets/background1.jpg');
   background-repeat:no-repeat;/* Blue background */
   background-size: cover;
 
@@ -63,7 +63,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'MyCustomFont', sans-serif;
+  font-family: 'MyCustomFont6', sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .info-box:hover {
@@ -73,34 +73,35 @@
 /* Info Box Heading Styles */
 .info-box h1 {
   font-size: 2.8rem; /* Larger heading */
-  color: #1292e1;
+  color: #005F9E;
   margin-bottom: 15px;
   font-family: 'MyCustomFont5', sans-serif;
   text-transform: uppercase; /* Uppercase text for emphasis */
 }
 .info-box h2 {
   font-size: 1.5rem;
-  color: #36bfde;
+  color: #4a4a4a;
   margin-bottom: 20px;
-  font-family: 'MyCustomFont4', sans-serif;
+  font-family: 'MyCustomFont6', sans-serif;
   font-style: italic; /* Italicized subtitle */
 }
 /* Info Box Paragraph */
 .info-box p {
   font-size: 1.4rem;
-  color: #edad2d;
+  color: #4a4a4a;
   line-height: 1.8;
   margin: 0;
   font-family: 'MyCustomFont4', sans-serif;
   transition: color 0.3s ease;
 }
 .info-box p:hover {
-  color: #36bfde; /* Subtle color change on hover */
+  color: #8B572A;
+   /* Subtle color change on hover */
 }
 
 /* Info Box Button */
 .info-box button {
-  background-color: #a63c06;
+  background-color: #F57C00;
   color: white;
   padding: 15px 30px;
   border: none;
@@ -113,7 +114,7 @@
 }
 
 .info-box button:hover {
-  background-color: #6495ED;
+  background-color: #8B572A;
   transform: scale(1.05); /* Slight scale effect */
 }
 
@@ -151,9 +152,9 @@
 .insurance-section h3 {
   margin-top: -2px;
   font-size: 1.5rem;
-  color: #0e0c0c;
+  color: #4a4a4a;
   margin-bottom: 20px;
-  font-family: 'MyCustomFont4', sans-serif;
+  font-family: 'MyCustomFont4',sans-serif;
 }
 
 /* Insurance Logos */

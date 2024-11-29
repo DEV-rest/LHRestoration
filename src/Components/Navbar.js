@@ -1,121 +1,36 @@
+// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import './Navbar.css';
 import logo from '../Assets/logo.png';
-
-// Styled components
-const NavbarContainer = styled.nav`
-  background-color: #f2f3f5; /* Light gray background */
-  padding: 1px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-`;
-
-const TopBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  width: 100%; /* Full width to align logo, brand name, and button */
-`;
-
-const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Space between logo and brand name */
-`;
-
-const Logo = styled.img`
-  height: 120px; /* Adjust height for a better fit */
-  width: auto;
-  padding-right:10px;
-  padding-left: 180px;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    height: 60px; /* Responsive adjustment for smaller screens */
-  }
-`;
-
-const BrandName = styled.h1`
-  font-family: 'HeadingFont', sans-serif; /* Custom font */
-  font-size: 2rem; /* Adjust as needed */
-  color: #004488; /* Brand color */
-  margin: 0; /* Remove default margin */
-`;
-
-const EmergencyButton = styled.a`
-  background-color: #ff4d4d; /* Red button for emergency */
-  color: #ffffff; /* White text for contrast */
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #d43b3b; /* Darker red on hover */
-  }
-`;
-
-const NavBarContents = styled.div`
-  background-color: #191970; /* Dark blue for navbar look */
-  padding: 10px 20px;
-  width: 100%; /* Full width for bar-like appearance */
-  display: flex;
-  justify-content: center; /* Center navigation links */
-  align-items: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-`;
-
-const NavLinks = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 30px;
-
-  @media (max-width: 768px) {
-    gap: 15px; /* Adjust spacing for smaller screens */
-  }
-`;
-
-const NavItem = styled(Link)`
-  color: #ffffff; /* White text for contrast */
-  text-decoration: none;
-  font-size: 1.6rem; 
-  font-weight: bold;
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-
-  &:hover {
-    color: #6495ED; /* Highlight on hover */
-    text-decoration: underline;
-  }
-`;
+import logo4 from '../Assets/logo4.png';
+import { FaPhoneAlt } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-    <NavbarContainer>
-      <TopBar>
-        <LogoContainer>
-          <Logo src={logo} alt="Logo" />
-          <BrandName>Longhorn 
-          <br/>Restoration</BrandName>
-        </LogoContainer>
-        
-        <EmergencyButton  href="tel:+8172350569">(817) 235-0569</EmergencyButton>
-        
-      </TopBar>
-      <NavBarContents>
-        <NavLinks>
-          <NavItem to="/">Home</NavItem>
-          <NavItem to="/services">Services</NavItem>
-          <NavItem to="/about">About</NavItem>
-          <NavItem to="/contact">Contact</NavItem>
-        </NavLinks>
-      </NavBarContents>
-    </NavbarContainer>
+    <nav className="navbar-container">
+      <div className="top-bar">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo4} alt="Second Logo" className="second-logo" />
+          
+        </div>
+        <div className="emergency-container">
+          <span className="emergency-title">Emergency? Call us now 24/7</span>
+          <a href="tel:+8172350569" className="emergency-button">
+            <FaPhoneAlt className="phone-icon" /> (817) 235-0569
+          </a>
+        </div>
+      </div>
+      <div className="navbar-contents">
+        <div className="nav-links">
+          <Link to="/" className="nav-item">Home</Link>
+          <Link to="/services" className="nav-item">Services</Link>
+          <Link to="/about" className="nav-item">About</Link>
+          <Link to="/contact" className="nav-item">Contact</Link>
+        </div>
+      </div>
+    </nav>
   );
 };
 
