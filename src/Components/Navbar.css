@@ -1,125 +1,149 @@
 /* Navbar.css */
 
 .navbar-container {
-    background-color: #F5F5F5; /* Light gray background */
-    padding: 0px 0px; /* Adjusted padding */
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-  
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px; /* Adjusted padding */
-    height:fit-content;
-    width: 100%; /* Full width to align logo, brand name, and button */
-    box-sizing: border-box;
-    position: relative;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0px; /* Space between logos and brand name */
-  }
-  
-  .logo {
-    height: 150px; /* Increased height */
-    width: 250px; /* Increased width */
-    padding-left:50px;
-    cursor: pointer;
-  }
-  
-  .second-logo {
-    height: 150px; /* Adjust height for second logo */
-    width: 350px;
-    position: absolute; /* Absolutely position it within the .top-bar */
-   left: 50%; /* Move the logo to the center horizontally */
-   transform: translateX(-50%); /* Center the logo exactly */
-    cursor: pointer;
-  }
-  
-  .brand-name {
-    font-family: 'HeadingFont', sans-serif; /* Custom font */
-    font-size: 2rem; /* Adjust as needed */
-    color: #004488; /* Brand color */
-    margin: 0; /* Remove default margin */
-  }
-  
-  .emergency-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 5px; /* Spacing between title and button */
-  }
-  
-  .emergency-title {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333333; /* Neutral dark color */
-  }
-  
-  .emergency-button {
-    background-color: #f57c00; /* Orange button for emergency */
-    color: #ffffff; /* White text for contrast */
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icon and text */
-    transition: background-color 0.3s ease;
-  }
-  
-  .emergency-button:hover {
-    background-color: #d43b3b; /* Darker red on hover */
-  }
-  
-  .phone-icon {
-    font-size: 1.2rem; /* Adjust icon size */
-  }
-  
-  .navbar-contents {
-    background-color: #005f9e; /* Dark blue for navbar */
-    padding: 10px 0; /* Adjust padding */
-    width: 100%; /* Full width for bar-like appearance */
-    display: flex;
-    justify-content: center; /* Center navigation links */
-    align-items: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-  }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  .nav-item {
-    color: #ffffff; /* White text for contrast */
-    text-decoration: none;
-    font-size: 1.6rem; 
-    font-weight: bold;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .nav-item:hover {
-    color: #bde3ef; /* Highlight on hover */
-    transform: scale(1.1); /* Make the text larger on hover */
-  }
-  .animated-logo {
-    height: 100px; /* Match the height of the first logo */
-    width: auto;
-    margin-left: 5px; /* Small space between the two logos */
-    border-radius: 5px; /* Optional: adds rounded corners to the video */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
-  }
-  
+  background-color: #F5F5F5; /* Light gray background */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: sticky; /* Sticky navbar */
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  width: 100%; /* Lock full width */
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-container.shrink {
+  height: 80%; /* Shrink height proportionally */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px; /* Adjusted padding */
+  height: 150px; /* Initial height of top bar */
+  width: 100%; /* Full width to align all items */
+  box-sizing: border-box;
+  position: relative;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-container.shrink .top-bar {
+  height: 100px; /* Shrink top-bar height */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0px; /* Space between logos and brand name */
+}
+
+.logo {
+  height: 150px;
+  width: 250px;
+  padding-left: 50px;
+  cursor: pointer;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.navbar-container.shrink .logo {
+  height: 100px; /* Shrink logo height */
+  width: 200px; /* Shrink logo width */
+}
+
+.second-logo {
+  height: 150px;
+  width: 350px;
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.navbar-container.shrink .second-logo {
+  height: 100px;
+  width: 280px;
+}
+
+.emergency-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  transition: transform 0.3s ease; /* Smooth shrinking transition */
+}
+
+.navbar-container.shrink .emergency-container {
+  transform: scale(0.85); /* Shrink emergency container */
+}
+
+.emergency-button {
+  background-color: #f57c00; /* Orange button for emergency */
+  color: #ffffff; /* White text for contrast */
+  padding: 15px 20px;
+  margin-top: 10px;
+  margin-right: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.emergency-button:hover {
+  background-color: #d43b3b; /* Darker red on hover */
+}
+
+.navbar-contents {
+  background-color: #005f9e; /* Dark blue for navbar */
+  padding: 10px 0;
+  width: 100%; /* Lock full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-container.shrink .navbar-contents {
+  padding: 8px 0; /* Slightly reduce navbar padding */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-item {
+  color: #ffffff; /* White text for contrast */
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #bde3ef; /* Highlight on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.animated-logo {
+  height: 100px; /* Match the height of the first logo */
+  width: auto;
+  margin-left: 5px;
+  border-radius: 5px; /* Optional: adds rounded corners to the video */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  transition: transform 0.3s ease; /* Smooth shrinking transition */
+}
+
+.navbar-container.shrink .animated-logo {
+  transform: scale(0.85); /* Shrink animated logo */
+}
