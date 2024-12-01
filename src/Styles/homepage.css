@@ -56,7 +56,7 @@
   height: 400px; /* Increased height */
   background: rgba(173, 216, 230, 0.4); /* Glass effect */
   backdrop-filter: blur(25px); /* Enhanced blur effect */
-  padding: 90px; /* Increased padding for text */
+  padding: 0px; /* Increased padding for text */
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
   display: flex;
@@ -75,14 +75,14 @@
   font-size: 2.8rem; /* Larger heading */
   color: #005F9E;
   margin-bottom: 15px;
-  font-family: 'MyCustomFont5', sans-serif;
+  font-family: 'MyCustomFont6', sans-serif;
   text-transform: uppercase; /* Uppercase text for emphasis */
 }
 .info-box h2 {
   font-size: 1.5rem;
   color: #4a4a4a;
   margin-bottom: 20px;
-  font-family: 'MyCustomFont6', sans-serif;
+  font-family: 'MyCustomFont4', sans-serif;
   font-style: italic; /* Italicized subtitle */
 }
 /* Info Box Paragraph */

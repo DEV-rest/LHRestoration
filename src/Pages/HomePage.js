@@ -15,7 +15,7 @@ const HomePage = () => {
       <div className="info-model-container">
         <div className="info-box">
         
-          <h1>"Reviving Spaces, Restoring Strength"</h1>
+          <h1>"Drying Out DFW, Restoring Fort Worth – Water Damage Solutions You Can Trust!"</h1>
           <p>
             We aim to revitalize homes and businesses by restoring water-damaged areas, breathing new life into wood surfaces, and ensuring the structural integrity of every project.
           </p>
