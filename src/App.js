@@ -13,8 +13,10 @@ import HomeDepotLogo from './Assets/brands_logos/home_depot_logo.png';
 import BestBuyLogo from './Assets/brands_logos/best_buy_logo.png';
 import DollarGeneralLogo from './Assets/brands_logos/dollar_general_logo.png';
 import ChaseBankLogo from './Assets/brands_logos/chase_bank_logo.jpg';
-import BrandLogo1 from './Assets/brands_logos/brand_logo_1.png';
-import BrandLogo2 from './Assets/brands_logos/brand_logo_2.png';
+import Concentra from './Assets/brands_logos/concentra_logo.png';
+import Kohls from './Assets/brands_logos/kohls_logo.png';
+import TractorSupply from './Assets/brands_logos/tractorsupply_logo.png'
+import AspenDental from './Assets/brands_logos/aspen_dental_logo.png'
 
 // Array of brand logos
 const brands = [
@@ -22,8 +24,10 @@ const brands = [
   { name: 'Best Buy', logo: BestBuyLogo },
   { name: 'Dollar General', logo: DollarGeneralLogo },
   { name: 'Chase Bank', logo: ChaseBankLogo },
-  { name: 'Brand 1', logo: BrandLogo1 },
-  { name: 'Brand 2', logo: BrandLogo2 },
+  { name: 'Concentra', logo: Concentra },
+  { name: 'Kohls', logo: Kohls },
+  { name: 'Tractor Supply', logo: TractorSupply },
+  { name: 'Aspen Dental', logo: AspenDental },
 ];
 
 const App = () => {
