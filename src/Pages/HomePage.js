@@ -10,7 +10,9 @@ import metlife from '../Assets/ins_logos/metlife.png';
 
 const HomePage = () => {
   return (
+    
     <div className="homepage-container">
+      <br />  <br />  
       {/* Info Box and Model */}
       <div className="info-model-container">
         <div className="info-box">
@@ -27,7 +29,7 @@ const HomePage = () => {
           <VanModel scale={2.5} />
         </div>
       </div>
-
+         < br />
       {/* Insurance Section */}
       <div className="insurance-section">
         <h3>Longhorn Restoration works directly with your Insurance company</h3>
