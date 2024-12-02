@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
-import Vansss from './Vanss'; 
+import Vansss from './Van1'; 
 import * as THREE from 'three';
 
 const AnimatedVan = () => {
