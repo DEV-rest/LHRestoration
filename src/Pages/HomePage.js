@@ -7,6 +7,7 @@ import Progressive from '../Assets/ins_logos/Progressive.png';
 import allstate from '../Assets/ins_logos/allstate.png';
 import geico from '../Assets/ins_logos/geico.png';
 import metlife from '../Assets/ins_logos/metlife.png';
+import InfoScrollComponent from './InfoScrollComponent';
 
 const HomePage = () => {
   return (
@@ -42,6 +43,7 @@ const HomePage = () => {
           <img src={metlife} alt="MetLife" />
         </div>
       </div>
+      <div> <InfoScrollComponent /></div>
     </div>
   );
 };
