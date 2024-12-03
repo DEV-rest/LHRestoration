@@ -9,6 +9,10 @@ import geico from '../Assets/ins_logos/geico.png';
 import metlife from '../Assets/ins_logos/metlife.png';
 import InfoScrollComponent from './InfoScrollComponent';
 
+
+
+
+
 const HomePage = () => {
   return (
     
@@ -42,9 +46,15 @@ const HomePage = () => {
           <img src={geico} alt="Nationwide" />
           <img src={metlife} alt="MetLife" />
         </div>
+
       </div>
+
       <div> <InfoScrollComponent /></div>
+
+      
+
     </div>
+      
   );
 };
 
