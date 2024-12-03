@@ -2,132 +2,151 @@
 .brand-container {
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Prevent any overflow from animation */
-  width: 100%; /* Full width of the parent */
+  overflow: hidden;
+  width: 100%;
   position: relative;
-  padding: 20px 0; /* Optional spacing around the rows */
+  padding: 20px 0;
 }
 
 /* Row styling */
 .brand-row {
   display: flex;
-  justify-content: flex-start; /* Logos align left initially */
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   overflow: hidden;
   position: relative;
-  gap: 50px; /* Space between logos */
-  margin-bottom: 20px; /* Space between rows */
+  gap: 50px;
+  margin-bottom: 20px;
   margin-left: 20%;
 }
 
-/* Individual brand item (with transparent box) */
+/* Individual brand item */
 .brand-item {
-  flex-shrink: 0; /* Prevent logos from shrinking */
+  flex-shrink: 0;
 }
 
 .brand-box {
-  width: 250px; /* Uniform box size */
+  width: 250px;
   height: 130px;
   display: flex;
-  white-space: nowrap;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.3); /* Transparent box */
-  border: 1px solid rgba(0, 0, 0, 0.1); /* Optional border */
-  border-radius: 10px; /* Rounded edges */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo styling */
 .brand {
-  width: 140px; /* Logo width */
-  height: auto; /* Maintain aspect ratio */
+  width: 140px;
+  height: auto;
   margin-right: 5px;
 }
 
-/* Section Styling */
+/* Section styling */
 .brands-section {
   text-align: center;
-  margin-bottom: 40px; /* Space between heading and logos */
+  margin-bottom: 40px;
 }
 
-/* Heading Styling */
+/* Heading styling */
 .brands-heading {
-  font-size: 1.8rem;
+  text-align: center; /* Center-align the heading */
+  font-size: 2.5rem; /* Maintain font size */
   font-weight: bold;
-  margin-bottom: 20px; /* Space between heading and brand rows */
-  color: #005F9E; /* Dark gray text */
+  margin-bottom: 20px;
+  color: #005F9E; /* Dark blue text */
+  position: relative;
+  overflow: hidden; /* Clip any overflow from the highlight */
 }
 
-/* Animation for left-to-right movement with a pause in the middle */
+.brands-heading span {
+  position: relative; /* Needed for the pseudo-element to position correctly */
+  display: inline-block; /* Ensure highlight only wraps the text */
+  overflow: hidden;
+}
+
+.brands-heading span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--highlight-width, 0%);
+  background-color: orange; /* Highlight color */
+  background: linear-gradient(to right, #ff7eb3, #ff758c); /* Example gradient */
+  z-index: -1;
+  transform: scaleX(0); /* Start hidden */
+  transform-origin: left;
+  transition: width 0.5s ease-out; /* Smooth width transition */
+}
+
+.brands-heading:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* Animation for left-to-right movement */
 @keyframes move-left-to-right {
   0% {
-    transform: translateX(100%); /* Start off-screen to the right */
+    transform: translateX(100%);
   }
   40% {
-    transform: translateX(0%); /* Element reaches the middle of the container */
+    transform: translateX(0%);
   }
   50% {
-    transform: translateX(0%); /* Pause in the middle */
+    transform: translateX(0%);
   }
   75% {
-    transform: translateX(0%); /* Keep at the center */
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%); /* Move off-screen to the left */
+    transform: translateX(-100%);
   }
 }
 
-/* Animation for right-to-left movement with a pause in the middle */
+/* Animation for right-to-left movement */
 @keyframes move-right-to-left {
   0% {
-    transform: translateX(-100%); /* Start off-screen to the left */
+    transform: translateX(-100%);
   }
   40% {
-    transform: translateX(0%); /* Element reaches the middle of the container */
+    transform: translateX(0%);
   }
   50% {
-    transform: translateX(0%); /* Pause in the middle */
+    transform: translateX(0%);
   }
   75% {
-    transform: translateX(0%); /* Keep at the center */
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(100%); /* Move off-screen to the right */
+    transform: translateX(100%);
   }
 }
 
 /* Apply the animation to the rows */
-.row-left-to-right {
-  animation: move-left-to-right 10s linear infinite;
-}
-
-.row-right-to-left {
-  animation: move-right-to-left 10s linear infinite;
-}
-
-/* Responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .brand-row {
-    gap: 200px; /* Reduce space between logos */
-  }
-  .brand-box {
-    width: 100px;
-    height: 50px;
-  }
-  .brand {
-    width: 50px; /* Smaller logo size */
-  }
-}
-
-/* Smooth animation adjustment */
 .row-left-to-right {
   animation: move-left-to-right 10s ease-in-out infinite;
 }
 
 .row-right-to-left {
   animation: move-right-to-left 10s ease-in-out infinite;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .brand-row {
+    gap: 200px;
+  }
+  .brand-box {
+    width: 100px;
+    height: 50px;
+  }
+  .brand {
+    width: 50px;
+  }
 }
 
 /* Pause animation on hover */
