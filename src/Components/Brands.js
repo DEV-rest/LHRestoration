@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import "./Brands.css";
 
-
 const Brands = ({ brands }) => {
-  // Function to divide brands into rows dynamically
   const divideIntoRows = (items, itemsPerRow = 2) => {
     const rows = [];
     for (let i = 0; i < items.length; i += itemsPerRow) {
@@ -12,32 +10,44 @@ const Brands = ({ brands }) => {
     return rows;
   };
 
-  // Generate rows dynamically
   const rows = divideIntoRows(brands, Math.ceil(brands.length / 2));
 
   useEffect(() => {
     const handleScroll = () => {
       const heading = document.querySelector(".brands-heading");
-      if (!heading) return;
+      const brandsContainer = document.querySelector(".brands-section");
 
-      const spans = heading.querySelectorAll("span");
-      const rect = heading.getBoundingClientRect();
+      if (!heading || !brandsContainer) return;
+
+      const words = heading.querySelectorAll("span.word");
+      const brandsContainerRect = brandsContainer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const visibility = Math.min(100, ((windowHeight - rect.top) / windowHeight) * 100);
-        const segmentWidth = visibility / spans.length;
+      // Check if the brands container is in view
+      if (brandsContainerRect.top + brandsContainerRect.height > 0 && brandsContainerRect.bottom < windowHeight) {
+        // Calculate scroll progress within the brands container
+        const containerScrollHeight = brandsContainerRect.height;
+        const scrollPositionInContainer = Math.max(0, windowHeight - brandsContainerRect.top);
+        const scrollProgress = Math.min(
+          1,
+          scrollPositionInContainer / containerScrollHeight
+        );
 
-        spans.forEach((span, index) => {
-          // Set each span's highlight width progressively
-          const highlightWidth = Math.min(100, segmentWidth * (index + 1));
-          span.style.setProperty("--highlight-width", `${highlightWidth}%`);
+        // Determine which word should be highlighted
+        const highlightIndex = Math.floor(scrollProgress * (words.length - 1));
+
+        words.forEach((word, index) => {
+          word.style.setProperty("--highlight-opacity", index <= highlightIndex ? 1 : 0);
+        });
+      } else {
+        // Reset highlights when the brands container is not in view
+        words.forEach((word) => {
+          word.style.setProperty("--highlight-opacity", 0);
         });
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -45,13 +55,16 @@ const Brands = ({ brands }) => {
 
   return (
     <div className="brands-section">
-      {/* Heading */}
       <h2 className="brands-heading">
-        <span>"Proud to Have Worked with Top Commercial Clients:"</span>
+        <span>{"Trusted PartnertoThousandsofCommercialClients".split(" ").map(
+          (word, index) => (
+            <span key={index} className="word">
+              {word}{" "}
+            </span>
+          )
+        )}</span>
       </h2>
-
       <div className="brand-container">
-        {/* Render rows */}
         {rows.map((rowBrands, rowIndex) => (
           <div
             key={`brand-row-${rowIndex}`}

@@ -1,7 +1,7 @@
 /* Navbar.css */
 
 .navbar-container {
-  background-color: #F5F5F5; /* Light gray background */
+  background-color: #124278; /* Light gray background */
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,8 @@
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
   width: 100%; /* Lock full width */
-  transition: height 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, height 0.3s ease; /* Smooth transform and height transition */
+  will-change: transform, height; /* Optimizes for performance */
 }
 
 .navbar-container.shrink {
@@ -28,7 +29,8 @@
   width: 100%; /* Full width to align all items */
   box-sizing: border-box;
   position: relative;
-  transition: height 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, height 0.3s ease; /* Smooth transform and height transition */
+  will-change: transform, height; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .top-bar {
@@ -46,7 +48,8 @@
   width: 250px;
   padding-left: 50px;
   cursor: pointer;
-  transition: height 0.3s ease, width 0.3s ease;
+  transition: height 0.3s ease, width 0.3s ease; /* Smooth size transition */
+  will-change: height, width; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .logo {
@@ -61,7 +64,8 @@
   left: 50%; /* Center horizontally */
   transform: translateX(-50%);
   cursor: pointer;
-  transition: height 0.3s ease, width 0.3s ease;
+  transition: height 0.3s ease, width 0.3s ease; /* Smooth size transition */
+  will-change: height, width; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .second-logo {
@@ -71,14 +75,16 @@
 
 .emergency-container {
   display: flex;
+  color:#F5F5F5;
   flex-direction: column;
   align-items: flex-end;
   gap: 5px;
   transition: transform 0.3s ease; /* Smooth shrinking transition */
+  will-change: transform; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .emergency-container {
-  transform: scale(0.85); /* Shrink emergency container */
+  transform: scaleY(0.8); /* Shrink emergency container */
 }
 
 .emergency-button {
@@ -95,6 +101,7 @@
   align-items: center;
   gap: 12px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  will-change: background-color, transform; /* Optimizes for performance */
 }
 
 .emergency-button:hover {
@@ -102,14 +109,15 @@
 }
 
 .navbar-contents {
-  background-color: #005f9e; /* Dark blue for navbar */
+  background-color: #F5F5F5; /* Dark blue for navbar */
   padding: 10px 0;
   width: 100%; /* Lock full width */
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: height 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth transform transition */
+  will-change: transform; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .navbar-contents {
@@ -123,15 +131,16 @@
 }
 
 .nav-item {
-  color: #ffffff; /* White text for contrast */
+  color: #124278; /* White text for contrast */
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: bold;
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  will-change: color, transform; /* Optimizes for performance */
 }
 
 .nav-item:hover {
-  color: #bde3ef; /* Highlight on hover */
+  color: #f57c00; /* Highlight on hover */
   transform: scale(1.1); /* Slight zoom on hover */
 }
 
@@ -142,6 +151,7 @@
   border-radius: 5px; /* Optional: adds rounded corners to the video */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
   transition: transform 0.3s ease; /* Smooth shrinking transition */
+  will-change: transform; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .animated-logo {

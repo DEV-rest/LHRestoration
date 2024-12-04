@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import ServicesPage from './Pages/ServicesPage';
@@ -15,8 +15,8 @@ import DollarGeneralLogo from './Assets/brands_logos/dollar_general_logo.png';
 import ChaseBankLogo from './Assets/brands_logos/chase_bank_logo.jpg';
 import Concentra from './Assets/brands_logos/concentra_logo.png';
 import Kohls from './Assets/brands_logos/kohls_logo.png';
-import TractorSupply from './Assets/brands_logos/tractorsupply_logo.png'
-import AspenDental from './Assets/brands_logos/aspen_dental_logo.png'
+import TractorSupply from './Assets/brands_logos/tractorsupply_logo.png';
+import AspenDental from './Assets/brands_logos/aspen_dental_logo.png';
 
 // Array of brand logos
 const brands = [
@@ -31,8 +31,10 @@ const brands = [
 ];
 
 const App = () => {
+  const location = useLocation();
+
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -40,10 +42,17 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-      <Brands brands={brands} />
+      {/* Render Brands only on specific routes */}
+      {(location.pathname === '/' || location.pathname === '/services') && <Brands brands={brands} />}
       <Footer />
-    </Router>
+    </>
   );
 };
 
-export default App;
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;
