@@ -7,6 +7,28 @@
 }
 
 @font-face {
+  font-family: 'MyCustomFont10';
+  src: url('../../public/fonts/Lucky\ Blues.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyCustomFont11';
+  src: url('../../public/fonts/Ragna.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyCustomFont12';
+  src: url('../../public/fonts/Best\ Work.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'MyCustomFont5';
   src: url('../../public/fonts/Chopsic-K6Dp.ttf') format('truetype');
 }
@@ -63,7 +85,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'MyCustomFont6', sans-serif;
+  font-family: 'MyCustomFont12', sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .info-box:hover {
@@ -75,14 +97,14 @@
   font-size: 2.8rem; /* Larger heading */
   color: #005F9E;
   margin-bottom: 15px;
-  font-family: 'MyCustomFont6', sans-serif;
+  font-family: 'MyCustomFont10', sans-serif;
   text-transform: uppercase; /* Uppercase text for emphasis */
 }
 .info-box h2 {
   font-size: 1.5rem;
   color: #4a4a4a;
   margin-bottom: 20px;
-  font-family: 'MyCustomFont4', sans-serif;
+  font-family: 'MyCustomFont10', sans-serif;
   font-style: italic; /* Italicized subtitle */
 }
 /* Info Box Paragraph */
@@ -154,7 +176,7 @@
   font-size: 1.5rem;
   color: #4a4a4a;
   margin-bottom: 20px;
-  font-family: 'MyCustomFont4',sans-serif;
+  font-family: 'MyCustomFont12',sans-serif;
 }
 
 /* Insurance Logos */

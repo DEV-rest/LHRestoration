@@ -26,7 +26,9 @@ const HomePage = () => {
           <p>
             We aim to revitalize homes and businesses by restoring water-damaged areas, breathing new life into wood surfaces, and ensuring the structural integrity of every project.
           </p>
-          <button>Learn More</button>
+          <a href="/services" target="_blank" rel="noopener noreferrer">
+      <button>Learn More</button>
+    </a>
         </div>
 
         {/* 3D Model */}

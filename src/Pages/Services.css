@@ -11,6 +11,7 @@
   text-align: center;
   font-size: 36px;
   font-weight: bold;
+  font-family: 'MyCustomFont12',sans-serif;
   color: #004d4d; /* Darker teal for contrast */
   margin-top: 5px; /* Removed top margin */
   margin-bottom: 30px; /* Keep a slight gap below */
@@ -40,6 +41,7 @@
   height: 350px;
   overflow: hidden;
   position: relative;
+
 }
 
 .service-card:hover {
@@ -53,6 +55,7 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.6s ease-in-out;
+  font-family: 'MyCustomFont12',sans-serif;
 }
 
 .service-card.active .service-card-inner {

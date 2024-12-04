@@ -9,6 +9,7 @@
     opacity: 0; /* Start invisible */
     transform: scale(0.8); /* Start slightly smaller */
     transition: transform 0.6s ease, opacity 0.6s ease;
+ 
   }
   
   .testimonials-section.visible {
@@ -23,6 +24,7 @@
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    font-family: 'MyCustomFont11',sans-serif;
   }
   
   /* Testimonial Card */
