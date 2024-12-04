@@ -53,39 +53,50 @@
 
 /* Heading styling */
 .brands-heading {
-  text-align: center; /* Center-align the heading */
-  font-size: 2.5rem; /* Maintain font size */
+  text-align: center;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #005F9E; /* Dark blue text */
+  margin-bottom: 40px;
+  word-spacing: 1.5rem;
+  color: #005F9E;
   position: relative;
-  overflow: hidden; /* Clip any overflow from the highlight */
-}
-
-.brands-heading span {
-  position: relative; /* Needed for the pseudo-element to position correctly */
-  display: inline-block; /* Ensure highlight only wraps the text */
   overflow: hidden;
 }
 
-.brands-heading span::before {
+.brands-heading .word {
+  position: relative;
+  display:inline-block;
+  word-spacing: 5.5rem;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.brands-heading .word::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: var(--highlight-width, 0%);
-  background-color: orange; /* Highlight color */
-  background: linear-gradient(to right, #ff7eb3, #ff758c); /* Example gradient */
+  width: 100%;
+  background-color: rgba(240, 189, 96, var(--highlight-opacity, 0));
   z-index: -1;
-  transform: scaleX(0); /* Start hidden */
-  transform-origin: left;
-  transition: width 0.5s ease-out; /* Smooth width transition */
+  transition: background-color 0.3s ease;
 }
 
-.brands-heading:hover::before {
-  transform: scaleX(1);
+/* Ensure the words look natural */
+.brands-heading .word:hover::before {
+  background-color: rgb(234, 194, 120); /* Highlight fully on hover */
 }
+
+.word {
+  display: inline-block;
+  transition: opacity 0.3s ease-in-out;
+  opacity: var(--highlight-opacity, 0);
+}
+
+
+
+
 
 
 /* Animation for left-to-right movement */
