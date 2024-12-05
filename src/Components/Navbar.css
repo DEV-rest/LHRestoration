@@ -12,13 +12,13 @@
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
   width: 100%; /* Lock full width */
-  transition: transform 0.3s ease, height 0.3s ease; /* Smooth transform and height transition */
-  will-change: transform, height; /* Optimizes for performance */
-  font-family: 'MyCustomFont12', sans-serif;
+  transition: padding 0.3s ease; /* Smooth padding transition */
+  will-change: padding; /* Optimizes for performance */
+  font-family: 'MyCustomFont11', sans-serif;
 }
 
 .navbar-container.shrink {
-  height: 80%; /* Shrink height proportionally */
+  padding-top: 10px; /* Adjust padding instead of height */
 }
 
 .top-bar {
@@ -30,12 +30,12 @@
   width: 100%; /* Full width to align all items */
   box-sizing: border-box;
   position: relative;
-  transition: transform 0.3s ease, height 0.3s ease; /* Smooth transform and height transition */
-  will-change: transform, height; /* Optimizes for performance */
+  transition: padding 0.3s ease; /* Smooth padding transition */
+  will-change: padding; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .top-bar {
-  height: 100px; /* Shrink top-bar height */
+  padding: 0px 10px; /* Adjust padding instead of height */
 }
 
 .logo-container {
@@ -49,13 +49,12 @@
   width: 250px;
   padding-left: 50px;
   cursor: pointer;
-  transition: height 0.3s ease, width 0.3s ease; /* Smooth size transition */
-  will-change: height, width; /* Optimizes for performance */
+  transition: transform 0.3s ease; /* Smooth scaling instead of size change */
+  will-change: transform; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .logo {
-  height: 100px; /* Shrink logo height */
-  width: 200px; /* Shrink logo width */
+  transform: scale(0.85); /* Scale down instead of resizing */
 }
 
 .second-logo {
@@ -65,23 +64,28 @@
   left: 50%; /* Center horizontally */
   transform: translateX(-50%);
   cursor: pointer;
-  transition: height 0.3s ease, width 0.3s ease; /* Smooth size transition */
-  will-change: height, width; /* Optimizes for performance */
+  transition: transform 0.3s ease; /* Smooth scaling instead of size change */
+  will-change: transform; /* Optimizes for performance */
 }
 
 .navbar-container.shrink .second-logo {
-  height: 100px;
-  width: 280px;
+  transform: translateX(-50%) scale(0.8); /* Scale down with center alignment */
 }
 
 .emergency-container {
   display: flex;
-  color:#F5F5F5;
+  color: #F5F5F5;
   flex-direction: column;
   align-items: flex-end;
   gap: 5px;
   transition: transform 0.3s ease; /* Smooth shrinking transition */
   will-change: transform; /* Optimizes for performance */
+}
+
+.emergency-title {
+  font-family: 'MyCustomFont13', sans-serif;
+  color: #F5F5F5;
+  font-size: large;
 }
 
 .navbar-container.shrink .emergency-container {
@@ -133,6 +137,7 @@
 
 .nav-item {
   color: #124278; /* White text for contrast */
+  font-family: 'MyCustomFont13', sans-serif;
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: bold;

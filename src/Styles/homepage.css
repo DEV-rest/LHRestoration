@@ -12,6 +12,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'MyCustomFont13';
+  src: url('../../public/fonts/CooperLtBT-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'MyCustomFont11';
@@ -97,23 +103,25 @@
   font-size: 2.8rem; /* Larger heading */
   color: #005F9E;
   margin-bottom: 15px;
-  font-family: 'MyCustomFont10', sans-serif;
+  margin-top: -15px;
+  font-family: 'MyCustomFont13', sans-serif;
   text-transform: uppercase; /* Uppercase text for emphasis */
 }
 .info-box h2 {
   font-size: 1.5rem;
   color: #4a4a4a;
-  margin-bottom: 20px;
-  font-family: 'MyCustomFont10', sans-serif;
+  margin-bottom: 10px;
+  margin-top: 50%;
+  font-family: 'MyCustomFont13', sans-serif;
   font-style: italic; /* Italicized subtitle */
 }
 /* Info Box Paragraph */
 .info-box p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #4a4a4a;
   line-height: 1.8;
   margin: 0;
-  font-family: 'MyCustomFont4', sans-serif;
+  font-family: 'MyCustomFont13', sans-serif;
   transition: color 0.3s ease;
 }
 .info-box p:hover {
@@ -176,7 +184,7 @@
   font-size: 1.5rem;
   color: #4a4a4a;
   margin-bottom: 20px;
-  font-family: 'MyCustomFont12',sans-serif;
+  font-family: 'MyCustomFont13',sans-serif;
 }
 
 /* Insurance Logos */

@@ -1,5 +1,7 @@
 /* ContactUs.css */
-
+.main-container {
+  background: linear-gradient(to bottom right, rgba(240, 248, 255, 0.4), rgba(175, 238, 238, 0.6));
+}
 .contact-us-container {
     max-width: 800px;
     margin: 50px auto;

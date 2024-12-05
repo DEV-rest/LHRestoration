@@ -33,7 +33,7 @@
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'MyCustomFont12',sans-serif;
+    font-family: 'MyCustomFont13',sans-serif;
   }
   
   .contact-card:hover {
@@ -99,7 +99,7 @@
   
   .scroll-section h2 {
     font-size: 20px;
-    font-family: 'MyCustomFont12',sans-serif;
+    font-family: 'MyCustomFont13',sans-serif;
     color: #121010; /* White text for better contrast */
     margin-bottom: 15px;
     text-align: center;
@@ -108,7 +108,7 @@
   
   .scroll-section p {
     font-size: 16px;
-    color: #030202; /* White text for better contrast */
+    color: #4a4a4a; /* White text for better contrast */
     line-height: 1.6;
     text-align: justify;
     font-family: 'MyCustomFont7',sans-serif;
