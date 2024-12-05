@@ -52,7 +52,7 @@ const InfoScrollComponent = () => {
             Our 24-hour operators are ready to take your call and immediately
             dispatch a flood recovery expert to your property.
           </p>
-          <button className="call-now-btn">Call Now: (855) 393-2961</button>
+          <button className="call-now-btn">Call Now: (817) 235-0569</button>
         </div>
       </div>
 

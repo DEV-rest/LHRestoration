@@ -1,4 +1,12 @@
 /* Container for all rows */
+
+@font-face {
+  font-family: 'MyCustomFont13';
+  src: url('../../public/fonts/CooperLtBT-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .brand-container {
   display: flex;
   flex-direction: column;
@@ -56,17 +64,17 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 40px;
-  word-spacing: 1.5rem;
+  font-family: 'MyCustomFont13', sans-serif;
+  margin-bottom: 120px;
+  margin-top: 70px;
   color: #005F9E;
   position: relative;
-  overflow: hidden;
 }
 
 .brands-heading .word {
   position: relative;
-  display:inline-block;
-  word-spacing: 5.5rem;
+  display: inline-block;
+  padding: 0 1rem; /* Add padding between words */
   overflow: hidden;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -83,34 +91,22 @@
   transition: background-color 0.3s ease;
 }
 
-/* Ensure the words look natural */
 .brands-heading .word:hover::before {
   background-color: rgb(234, 194, 120); /* Highlight fully on hover */
 }
-
-.word {
-  display: inline-block;
-  transition: opacity 0.3s ease-in-out;
-  opacity: var(--highlight-opacity, 0);
-}
-
-
-
-
-
 
 /* Animation for left-to-right movement */
 @keyframes move-left-to-right {
   0% {
     transform: translateX(100%);
   }
-  40% {
+  30% {
     transform: translateX(0%);
   }
   50% {
-    transform: translateX(0%);
+    transform: translateX(0%); /* Pause longer in the middle */
   }
-  75% {
+  70% {
     transform: translateX(0%);
   }
   100% {
@@ -123,13 +119,13 @@
   0% {
     transform: translateX(-100%);
   }
-  40% {
+  30% {
     transform: translateX(0%);
   }
   50% {
-    transform: translateX(0%);
+    transform: translateX(0%); /* Pause longer in the middle */
   }
-  75% {
+  70% {
     transform: translateX(0%);
   }
   100% {
@@ -139,17 +135,47 @@
 
 /* Apply the animation to the rows */
 .row-left-to-right {
-  animation: move-left-to-right 10s ease-in-out infinite;
+  animation: move-left-to-right 6s ease-in-out infinite;
 }
 
 .row-right-to-left {
-  animation: move-right-to-left 10s ease-in-out infinite;
+  animation: move-right-to-left 6s ease-in-out infinite;
 }
 
 /* Responsiveness for smaller screens */
+@media (max-width: 1024px) {
+  .brand-row {
+    gap: 30px;
+    margin-left: 10%;
+  }
+  .brand-box {
+    width: 200px;
+    height: 100px;
+  }
+  .brand {
+    width: 100px;
+  }
+}
+
 @media (max-width: 768px) {
   .brand-row {
-    gap: 200px;
+    gap: 20px;
+    margin-left: 5%;
+  }
+  .brand-box {
+    width: 150px;
+    height: 75px;
+  }
+  .brand {
+    width: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
   }
   .brand-box {
     width: 100px;
@@ -158,10 +184,7 @@
   .brand {
     width: 50px;
   }
-}
-
-/* Pause animation on hover */
-.row-left-to-right:hover,
-.row-right-to-left:hover {
-  animation-play-state: paused;
+  .brands-heading {
+    font-size: 1.5rem;
+  }
 }

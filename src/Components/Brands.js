@@ -56,13 +56,16 @@ const Brands = ({ brands }) => {
   return (
     <div className="brands-section">
       <h2 className="brands-heading">
-        <span>{"Trusted PartnertoThousandsofCommercialClients".split(" ").map(
-          (word, index) => (
-            <span key={index} className="word">
-              {word}{" "}
-            </span>
-          )
-        )}</span>
+      <span>
+  {"Trusted Partner to Thousands of Commercial Clients"
+    .split(" ")
+    .map((word, index) => (
+      <span key={index} className="word">
+        {word}{" "}
+      </span>
+    ))}
+   </span>
+
       </h2>
       <div className="brand-container">
         {rows.map((rowBrands, rowIndex) => (

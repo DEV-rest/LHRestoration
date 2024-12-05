@@ -1,51 +1,110 @@
 .footer-container {
-    background-color: #124278;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer-top {
-    margin-bottom: 20px;
-  }
-  
-  .footer-logo {
-    width: 150px; /* Adjust as needed */
-  }
-  
-  .footer-social a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-  }
-  
-  .footer-social a:hover {
-    color: #007bff; /* Adjust hover color */
-  }
-  
-  .footer-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  .footer-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 1rem;
-  }
-  
-  .footer-icon {
-    margin-right: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .footer-bottom {
-    margin-top: 20px;
-    font-size: 0.875rem;
-    opacity: 0.8;
-  }
-  
+  background-color: #124278;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-top {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  width: 150px; /* Adjust as needed */
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #f57c00; /* Adjust hover color */
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.footer-item {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 1rem;
+  transition: color 0.3s; /* Added transition for hover */
+}
+
+.footer-item:hover .footer-icon,
+.footer-item:hover span {
+  color: #f57c00; /* Orange color on hover */
+}
+
+.footer-item span {
+  color: #fff; /* Ensure text color is white */
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.footer-item:hover span {
+  color: #f57c00; /* Orange color on hover */
+}
+
+.footer-icon {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer; /* Indicate interactivity */
+}
+
+.footer-icon:hover {
+  color: #f57c00; /* Orange color for hover */
+}
+
+.footer-info a.email-icon:hover,
+.footer-info a.phone-icon:hover,
+.footer-info a.location-icon:hover {
+  color: #f57c00; /* Orange color on hover */
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-navigation a {
+  color: #fff; /* White text for links */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-navigation a:hover {
+  color: #f57c00; /* Optional hover color */
+}
+
+.footer-navigation .separator {
+  color: orange; /* Orange color for | separator */
+}
+
+.footer-bottom {
+  width: 100%; /* Full width */
+  margin-top: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+  background-color: #fff; /* White background */
+  color: #124278; /* Navy blue text */
+  padding: 4px;
+  border-radius: 1px;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative; /* Ensure it's positioned correctly */
+}
