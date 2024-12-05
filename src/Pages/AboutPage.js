@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import "./about.css"; // Import custom styles
+import "./about.css";
 import Image1 from "../Assets/image1.jpeg";
 import Image2 from "../Assets/image2.jpg";
 
 const AboutPage = () => {
-  // Add Intersection Observer for animations
   useEffect(() => {
     const sections = document.querySelectorAll(".about-section");
 
@@ -30,9 +29,15 @@ const AboutPage = () => {
 
   return (
     <div className="about-container">
-      <div className="about-section">
+      {/* First Section - Who We Are */}
+      <div
+        className="about-section"
+        style={{
+          backgroundImage: `url(${Image1})`,
+        }}
+      >
         <div className="text-content">
-          <h4>Who We Are</h4>
+       
           <h2>Who We Are</h2>
           <p>
             Longhorn Restoration is a family-owned and operated business
@@ -44,17 +49,17 @@ const AboutPage = () => {
             protect your home or business with the urgency it deserves.
           </p>
         </div>
-        <div className="image-content">
-          <img src={Image1} alt="Who We Are" />
-        </div>
       </div>
 
-      <div className="about-section reverse">
-        <div className="image-content">
-          <img src={Image2} alt="Why Us" />
-        </div>
+      {/* Second Section - Why Us */}
+      <div
+        className="about-section reverse"
+        style={{
+          backgroundImage: `url(${Image2})`,
+        }}
+      >
         <div className="text-content">
-          <h4>Why Us</h4>
+          
           <h2>Why Us</h2>
           <p>
             The Longhorn Restoration team is dedicated to workmanship and
