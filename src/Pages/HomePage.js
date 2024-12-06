@@ -1,6 +1,6 @@
 import React from 'react';
 import VanModel from '../Components/VanModel'; // Import the 3D model
-import '../Styles/homepage.css';
+import './homepage.css';
 import usaa from '../Assets/ins_logos/usaa.png';
 import state from '../Assets/ins_logos/statefarm.png';
 import Progressive from '../Assets/ins_logos/Progressive.png';

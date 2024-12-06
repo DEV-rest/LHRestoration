@@ -3,6 +3,7 @@
   color: #fff;
   padding: 20px;
   text-align: center;
+  text-decoration: none;
 }
 
 .footer-top {
@@ -30,6 +31,7 @@
   align-items: center;
   margin: 20px 0;
   color: #fff;
+  text-decoration: none;
 }
 
 .footer-item {
@@ -39,6 +41,7 @@
   margin: 10px 0;
   font-size: 1rem;
   transition: color 0.3s; /* Added transition for hover */
+  text-decoration: none;
 }
 
 .footer-item:hover .footer-icon,
@@ -70,6 +73,7 @@
 .footer-info a.phone-icon:hover,
 .footer-info a.location-icon:hover {
   color: #f57c00; /* Orange color on hover */
+  text-decoration: none;
 }
 
 .footer-navigation {
@@ -78,6 +82,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .footer-navigation a {
@@ -89,6 +94,7 @@
 
 .footer-navigation a:hover {
   color: #f57c00; /* Optional hover color */
+  text-decoration: none;
 }
 
 .footer-navigation .separator {
@@ -106,5 +112,5 @@
   border-radius: 1px;
   text-align: center;
   box-sizing: border-box;
-  position: relative; /* Ensure it's positioned correctly */
+  position:static; /* Ensure it's positioned correctly */
 }

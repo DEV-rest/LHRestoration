@@ -17,6 +17,7 @@ import Concentra from './Assets/brands_logos/concentra_logo.png';
 import Kohls from './Assets/brands_logos/kohls_logo.png';
 import TractorSupply from './Assets/brands_logos/tractorsupply_logo.png';
 import AspenDental from './Assets/brands_logos/aspen_dental_logo.png';
+import ScrollToTopButton from './Pages/ScrollToTop';
 
 // Array of brand logos
 const brands = [
@@ -44,6 +45,7 @@ const App = () => {
       </Routes>
       {/* Render Brands only on specific routes */}
       {(location.pathname === '/' || location.pathname === '/services') && <Brands brands={brands} />}
+      <ScrollToTopButton />
       <Footer />
     </>
   );

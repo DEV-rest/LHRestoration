@@ -26,25 +26,25 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      image: 'https://via.placeholder.com/80',
-      name: 'John Doe',
+      image: require('../Assets/Customer_images/img1.png'),
+      name: 'Chandra Buck Manzke',
       stars: '⭐⭐⭐⭐⭐',
       feedback: 'Excellent service! My property was restored in no time.',
     },
     {
-      image: 'https://via.placeholder.com/80',
-      name: 'Jane Smith',
+      image: require('../Assets/Customer_images/img2.png'),
+      name: 'Leonora Spong',
       stars: '⭐⭐⭐⭐',
       feedback: 'Very professional and thorough. Highly recommend.',
     },
     {
-      image: 'https://via.placeholder.com/80',
-      name: 'Sam Brown',
+      image: require('../Assets/Customer_images/img3.png'),
+      name: 'Courtney Matzkanin',
       stars: '⭐⭐⭐⭐⭐',
       feedback: 'Amazing results and great customer support.',
     },
     {
-      image: 'https://via.placeholder.com/80',
+      image: require('../Assets/Customer_images/img4.png'),
       name: 'Emily White',
       stars: '⭐⭐⭐⭐',
       feedback: 'Quick response and effective work. I’m very satisfied.',

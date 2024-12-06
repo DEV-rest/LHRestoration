@@ -5,7 +5,6 @@
   gap: 40px;
   padding: 40px 20px;
   background: linear-gradient(to bottom right, rgba(240, 248, 255, 0.4), rgba(175, 238, 238, 0.6));
-
 }
 
 /* About Section */
@@ -26,7 +25,7 @@
   opacity: 0; /* Hidden by default for animation */
   transform: translateY(80px);
   background-size: cover; /* Ensure proportional scaling */
-  background-position:  center top; /* Position the image to show the head */
+  background-position: center top; /* Position the image to show the head */
   background-repeat: no-repeat;
 }
 
@@ -39,7 +38,7 @@
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.1); /* Subtle white overlay */
-  backdrop-filter: blur(4px); /* Additional blur for the image */
+  backdrop-filter: blur(7px); /* Additional blur for the image */
   z-index: 1; /* Keep behind text */
   pointer-events: none; /* Prevent interaction */
 }
@@ -60,7 +59,9 @@
   z-index: 2;
   text-align: center;
   flex: 1;
+  position: relative;
   color: rgb(239, 238, 238); /* Make fonts black */
+  transition: transform 0.3s ease, font-size 0.3s ease; /* Hover animation */
 }
 
 .text-content h4 {
@@ -71,17 +72,24 @@
 
 .text-content h2 {
   font-size: 42px;
+  color: #f57c00;
   font-weight: bold;
-  margin-bottom: 20px;
-  font-family: 'MyCustomFont13',sans-serif;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  font-family: 'MyCustomFont13', sans-serif;
 }
 
 .text-content p {
   font-size: 20px;
   line-height: 1.6;
   color: rgba(2, 2, 67, 0.969); /* Subtle black-gray for readability */
-  font-family: 'MyCustomFont13',sans-serif;
+  font-family: 'MyCustomFont13', sans-serif;
   font-weight: bold;
+}
+
+.text-content:hover {
+  transform: scale(1.1); /* Expand on hover */
+  font-size: 1.2em;
 }
 
 /* Responsive Design */

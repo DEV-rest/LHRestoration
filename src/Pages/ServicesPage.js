@@ -9,26 +9,27 @@ const ServicePage = () => {
     {
       icon: '💧',
       title: 'Flood Restoration',
-      frontText: 'Professional flood recovery services. We help restore your property after flooding.',
-      backText: 'Minimize downtime with advanced technology. Dehydrate, dry, and contain moisture effectively!',
+      frontText: "Flood Recovery Experts: Transforming Chaos into Calm",
+      backText: 'Longhorn Restoration offers professional flood restoration services for residential and commercial properties, whether big or small.Equipped with state-of-the-art tools and years of experience, we can extract water fast, dry all affected areas, and return your space to its best condition. Trust us to handle restoration needs with care and professionalism.',
     },
     {
       icon: '🚿',
       title: 'Water Extraction',
-      frontText: 'Rapid water removal services for homes and businesses.',
-      backText: 'Reduce mold and structural risks. We ensure a thorough and quick cleanup!',
+      frontText: 'Efficient water removal tailored for any property size.',
+      backText: 'Prevent long-term damage and health hazards. Our team guarantees swift and complete restoration, using advanced equipment to remove every trace of moisture. We prioritize your safety and property value, ensuring a seamless recovery process with minimal disruption.',
     },
     {
       icon: '🌳',
       title: 'Wood Drying',
-      frontText: 'Restore your wood floors from moisture damage.',
-      backText: 'Reverse cupping and preserve your wood floors with precision techniques!',
+      frontText: 'Bring your wood floors back to life after water damage.',
+      backText: 'Wood floors with excessive moisture often begin to cup, which many believe is unrepairable. Our expert team can reverse the cupping process and restore your floors without the need for replacement. We use specialized techniques to ensure precise, high-quality results that preserve your home’s value.'
+      
     },
     {
       icon: '💨',
       title: 'Drying and Dehumidifying',
       frontText: 'Effective moisture removal for a safe, dry environment.',
-      backText: 'Prevent mold and structural damage with advanced dehumidifying solutions!',
+      backText: 'Combat mold growth and prevent structural damage with our advanced dehumidifying solutions. We ensure a thorough drying process, maintaining a healthy space and protecting your property from long-term damage.'
     },
   ];
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./InfoScrollComponent.css";
-import ProfileImage from "../Assets/background.jpg";
+import ProfileImage from "../Assets/img0.png";
 import flooddamage from "../Assets/flood-damage.jpeg";
 import water from "../Assets/waterremoval.jpeg";
 import waters from "../Assets/wooddamge.jpeg";
@@ -52,7 +52,9 @@ const InfoScrollComponent = () => {
             Our 24-hour operators are ready to take your call and immediately
             dispatch a flood recovery expert to your property.
           </p>
-          <button className="call-now-btn">Call Now: (817) 235-0569</button>
+          <a href="tel:+18172350569" className="call-now-btn">
+          Call Now: (817) 235-0569
+          </a>
         </div>
       </div>
 
@@ -60,21 +62,18 @@ const InfoScrollComponent = () => {
       <div className="right-panel" ref={rightPanelRef}>
         <div className="scroll-section">
           <img src={waters} alt="Water Damage" />
-          <h2>Water Damage in the Home</h2>
+          <h2>Addressing Water Damage in Your Home</h2>
           <p>
-            Water damage is a serious problem that can occur in any home, caused by
-            water incidents such as floods, burst water tanks or pipes, water and
-            sewage backup, or inclement weather.
+          "Water damage is a significant issue that can affect any home, resulting from incidents like floods, burst pipes or tanks, water and sewage backups, or severe weather conditions.
+           As a trusted company, we have your back, providing expert solutions to restore your home and peace of mind."
           </p>
         </div>
         <div className="scroll-section">
           <img src={water} alt="Emergency Water Removal" />
-          <h2>Emergency Water Removal</h2>
+          <h2>Wood Restoration by Extracting Moisture</h2>
           <p>
-            Water removal might become an emergency situation if water damage is due
-            to a burst or leaked water pipe, water main break, or heavy storm. If not
-            removed, water can damage structural elements of your property, such as
-            carpets, drywall, and even electrical wiring.
+          "Excess moisture can cause significant damage to wood, leading to issues such as warping, cupping, and reduced structural integrity.
+           As a trusted company, we have your back, using expert techniques to extract moisture and restore your wood surfaces, preserving their quality and longevity."
           </p>
         </div>
       </div>
