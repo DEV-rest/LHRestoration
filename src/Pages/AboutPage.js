@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./about.css";
 import Image1 from "../Assets/image1.jpeg";
-import Image2 from "../Assets/image2.jpg";
+import Image2 from "../Assets/img3.jpg";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -33,11 +33,10 @@ const AboutPage = () => {
       <div
         className="about-section"
         style={{
-          backgroundImage: `url(${Image1})`,
+          backgroundImage: `url(${Image2})`,
         }}
       >
         <div className="text-content">
-       
           <h2>Who We Are</h2>
           <p>
             Longhorn Restoration is a family-owned and operated business
@@ -55,11 +54,10 @@ const AboutPage = () => {
       <div
         className="about-section reverse"
         style={{
-          backgroundImage: `url(${Image2})`,
+          backgroundImage: `url(${Image1})`,
         }}
       >
         <div className="text-content">
-          
           <h2>Why Us</h2>
           <p>
             The Longhorn Restoration team is dedicated to workmanship and

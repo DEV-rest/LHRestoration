@@ -73,8 +73,8 @@
   /* Feedback */
   .testimonial-feedback {
     font-size: 16px;
-    font-style: italic;
-    color: #666;
+    font-family: 'MyCustomFont13',sans-serif;
+    color: #4a4a4a;
     line-height: 1.5;
   }
   

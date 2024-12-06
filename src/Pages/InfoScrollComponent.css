@@ -29,11 +29,15 @@
     background: rgba(255, 255, 255, 0.5); /* Transparent white background */
     backdrop-filter: blur(20px); /* Glassy blur effect */
     border-radius: 16px;
+    
     padding: 40px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-family: 'MyCustomFont13',sans-serif;
+  }
+  .contact-card p {
+    color: #8B572A;
   }
   
   .contact-card:hover {
@@ -59,6 +63,7 @@
     margin: 20px 0;
     transition: background 0.3s;
     font-family: 'MyCustomFont12',sans-serif;
+    text-decoration: none;
   }
   
   .call-now-btn:hover {
@@ -108,7 +113,7 @@
   
   .scroll-section p {
     font-size: 16px;
-    color: #4a4a4a; /* White text for better contrast */
+    color: #8B572A; /* White text for better contrast */
     line-height: 1.6;
     text-align: justify;
     font-family: 'MyCustomFont7',sans-serif;
