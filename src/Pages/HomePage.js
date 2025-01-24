@@ -30,7 +30,7 @@ const HomePage = () => {
           <strong>Discover the Difference</strong>
           
         </p>
-          <a href="/services" target="_blank" rel="noopener noreferrer">
+          <a href="/our-work" target="_blank" rel="noopener noreferrer">
       <button>Learn More</button>
     </a>
         </div>
