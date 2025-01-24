@@ -60,11 +60,11 @@ const Footer = () => {
 
       {/* Navigation links */}
       <div className="footer-navigation">
-        <a href="/about" target="_blank" rel="noopener noreferrer">About Us</a>
+        <a href="/about-3" target="_blank" rel="noopener noreferrer">About Us</a>
         <span>|</span>
-        <a href="/services" target="_blank" rel="noopener noreferrer">Service Area</a>
+        <a href="/our-work" target="_blank" rel="noopener noreferrer">Service Area</a>
         <span>|</span>
-        <a href="/contact" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        <a href="/members" target="_blank" rel="noopener noreferrer">Contact Us</a>
         <span>|</span>
         <a href="/agents-inspection-form">Agents Inspection Form</a>
         <span>|</span>
