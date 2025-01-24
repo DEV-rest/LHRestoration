@@ -39,9 +39,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/our-work" element={<ServicesPage />} />
+        <Route path="/about-3" element={<AboutPage />} />
+        <Route path="/members" element={<ContactPage />} />
       </Routes>
       {/* Render Brands only on specific routes */}
       {(location.pathname === '/' || location.pathname === '/services') && <Brands brands={brands} />}
