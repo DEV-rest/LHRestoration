@@ -20,13 +20,13 @@ const Footer = () => {
 
       {/* Social links */}
       <div className="footer-social">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/LHRestoration" target="_blank" rel="noopener noreferrer">
           <FaFacebook />
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <FaTwitter />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/longhornrestoration/" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
         </a>
       </div>

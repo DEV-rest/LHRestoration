@@ -29,7 +29,7 @@
     background: rgba(255, 255, 255, 0.5); /* Transparent white background */
     backdrop-filter: blur(20px); /* Glassy blur effect */
     border-radius: 16px;
-    
+    color:#124278;
     padding: 40px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds depth */
@@ -38,6 +38,7 @@
   }
   .contact-card p {
     color: #8B572A;
+    margin-bottom: 20%;
   }
   
   .contact-card:hover {
@@ -62,7 +63,7 @@
     cursor: pointer;
     margin: 20px 0;
     transition: background 0.3s;
-    font-family: 'MyCustomFont12',sans-serif;
+    font-family: 'MyCustomFont13'sans-serif;
     text-decoration: none;
   }
   
@@ -86,9 +87,10 @@
   /* Scroll Section (Cards) */
 .scroll-section {
     width: 60%; /* Narrower width for the cards */
-    height: 500px; /* Taller height for the cards */
+    height: 510px; /* Taller height for the cards */
     margin: 0 auto; /* Centers the cards horizontally */
-    background: rgba(255, 255, 255, 0.15); /* Semi-transparent glassy background */
+     /*background: rgba(255, 255, 255, 0.15); /* Semi-transparent glassy background */
+    background: rgba(255, 255, 255, 0.5); 
     backdrop-filter: blur(10px); /* Glassy blur effect */
     border-radius: 16px;
     padding: 20px;
@@ -105,7 +107,7 @@
   .scroll-section h2 {
     font-size: 20px;
     font-family: 'MyCustomFont13',sans-serif;
-    color: #121010; /* White text for better contrast */
+    color: #124278; /* White text for better contrast */
     margin-bottom: 15px;
     text-align: center;
     font-weight: bold;
