@@ -133,28 +133,53 @@
   
   
   /* Responsive Design - Mobile */
+/* Responsive Design - Mobile */
 @media (max-width: 768px) {
-    .info-scroll-container {
+  .info-scroll-container {
       flex-direction: column;
       padding: 10px;
-    }
-  
-    .left-panel {
+  }
+
+  .left-panel {
       position: static;
       margin-bottom: 10px;
-    }
-  
-    .scroll-section {
-      width: 100%; /* Cards take full width on mobile */
-      height: 350px; /* Reduce height further for mobile */
-    }
-  
-    .scroll-section h2 {
+  }
+
+  .scroll-section {
+      width: 100%; /* Full width for the cards on mobile */
+      height: auto; /* Allow height to adjust based on content */
+      padding: 20px; /* Add some padding to ensure the content doesn't touch the edges */
+      box-sizing: border-box; /* Ensure padding is included in width calculation */
+      margin-bottom: 20px; /* Space between cards */
+  }
+
+  .scroll-section h2 {
       font-size: 18px; /* Smaller font size for titles */
-    }
-  
-    .scroll-section p {
+  }
+
+  .scroll-section p {
       font-size: 14px; /* Smaller font size for text */
+  }
+}
+
+/* On Very Small Screens (e.g., 360px) */
+@media (max-width: 360px) {
+  .scroll-section {
+      width: 100%; /* Full width on very small screens */
+      padding: 15px; /* Add padding for smaller screens */
+  }
+
+  .scroll-section h2 {
+      font-size: 16px; /* Further reduce font size for headings */
+  }
+
+  .scroll-section p {
+      font-size: 12px; /* Further reduce font size for text */
+  }
+}
+
+  @media only screen and (max-width: 576px) {
+    .info-scroll-container {
+      margin-top: 160px;
     }
   }
-  
