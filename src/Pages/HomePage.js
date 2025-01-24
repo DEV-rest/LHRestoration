@@ -22,10 +22,14 @@ const HomePage = () => {
       <div className="info-model-container">
         <div className="info-box">
         
-          <h1>"Drying Out DFW, Restoring Fort Worth – Water Damage Solutions You Can Trust!"</h1>
+          <h1>"Serving DFW, Restoring Fort Worth – Your Trusted Water Damage Experts!"</h1>
           <p>
-            We aim to revitalize homes and businesses by restoring water-damaged areas, breathing new life into wood surfaces, and ensuring the structural integrity of every project.
+          Our mission is to restore and renew, transforming water-damaged spaces into vibrant homes and thriving businesses. From revitalizing wood surfaces to safeguarding structural integrity, we bring lasting solutions and peace of mind to every project.
           </p>
+        <p>
+          <strong>Discover the Difference</strong>
+          
+        </p>
           <a href="/services" target="_blank" rel="noopener noreferrer">
       <button>Learn More</button>
     </a>

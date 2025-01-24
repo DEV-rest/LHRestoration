@@ -64,16 +64,17 @@ const InfoScrollComponent = () => {
           <img src={waters} alt="Water Damage" />
           <h2>Addressing Water Damage in Your Home</h2>
           <p>
-          "Water damage is a significant issue that can affect any home, resulting from incidents like floods, burst pipes or tanks, water and sewage backups, or severe weather conditions.
-           As a trusted company, we have your back, providing expert solutions to restore your home and peace of mind."
+          Water damage is a significant issue that can affect any home, resulting from incidents like floods, burst pipes or tanks, water and sewage backups, or severe weather conditions.
+          As a dependable partner in restoration, we’re here to support you every step of the way, delivering expert solutions to rebuild not just your home but also your sense of security and peace of mind.With our dedicated team and proven expertise, you can trust us to restore what matters most, ensuring a seamless recovery experience.
           </p>
         </div>
         <div className="scroll-section">
           <img src={water} alt="Emergency Water Removal" />
           <h2>Wood Restoration by Extracting Moisture</h2>
           <p>
-          "Excess moisture can cause significant damage to wood, leading to issues such as warping, cupping, and reduced structural integrity.
-           As a trusted company, we have your back, using expert techniques to extract moisture and restore your wood surfaces, preserving their quality and longevity."
+          Excess moisture can cause significant damage to wood, leading to issues such as warping, cupping, and reduced structural integrity.
+          With our reputation for reliability, we’re here to support you, employing advanced techniques to remove moisture and restore your wood surfaces, ensuring their durability, beauty, and long-lasting quality.
+          Our skilled team understands the importance of preserving your home’s character and value, treating each project with precision. Trust us to not only address the immediate damage but also to implement preventative measures that protect your investment for years to come.
           </p>
         </div>
       </div>
