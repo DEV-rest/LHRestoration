@@ -7,6 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [shrink, setShrink] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State for the hamburger menu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,8 +24,13 @@ const Navbar = () => {
     };
   }, []);
 
+  // Toggle the menu open/close
+  const toggleMenu = () => {
+    setMenuOpen((prevMenuOpen) => !prevMenuOpen);
+  };
+
   return (
-    <nav className={`navbar-container ${shrink ? "shrink" : ""}`}>
+    <nav className={`navbar-container ${shrink ? "shrink" : ""} ${menuOpen ? "open" : ""}`}>
       <div className="top-bar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
@@ -37,20 +43,32 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+
+      {/* Hamburger Icon (Mobile Only) */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
       <div className="navbar-contents">
         <div className="nav-links">
-          <Link to="/" className="nav-item">
+          {/* Home link always visible */}
+          <Link to="/" className="nav-item home-item">
             Home
           </Link>
-          <Link to="/our-work" className="nav-item">
-            Services
-          </Link>
-          <Link to="/about-3" className="nav-item">
-            About
-          </Link>
-          <Link to="/members" className="nav-item">
-            Contact
-          </Link>
+          {/* Hidden links when menu is not open */}
+          <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+            <Link to="/our-work" className="nav-item">
+              Services
+            </Link>
+            <Link to="/about-3" className="nav-item">
+              About
+            </Link>
+            <Link to="/members" className="nav-item">
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
