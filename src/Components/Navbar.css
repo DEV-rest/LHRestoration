@@ -21,6 +21,29 @@
   padding-top: 10px; /* Adjust padding instead of height */
 }
 
+.nav-item {
+  color: #124278; /* Dark blue for nav item */
+  font-family: 'MyCustomFont13', sans-serif;
+  text-decoration: none;
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  will-change: color, transform; /* Optimizes for performance */
+  margin: 0 15px; /* Adjust spacing between nav items */
+}
+
+.nav-item:hover {
+  color: #f57c00; /* Highlight on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+  gap: 20px; /* Consistent spacing between nav items */
+}
+
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -129,51 +152,12 @@
   padding: 8px 0; /* Slightly reduce navbar padding */
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.nav-item {
-  color: #124278; /* White text for contrast */
-  font-family: 'MyCustomFont13', sans-serif;
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  will-change: color, transform; /* Optimizes for performance */
-}
-
-.nav-item:hover {
-  color: #f57c00; /* Highlight on hover */
-  transform: scale(1.1); /* Slight zoom on hover */
-}
-
-.animated-logo {
-  height: 100px; /* Match the height of the first logo */
-  width: auto;
-  margin-left: 5px;
-  border-radius: 5px; /* Optional: adds rounded corners to the video */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
-  transition: transform 0.3s ease; /* Smooth shrinking transition */
-  will-change: transform; /* Optimizes for performance */
-}
-
-.navbar-container.shrink .animated-logo {
-  transform: scale(0.85); /* Shrink animated logo */
-}
-
-/* Make navbar sticky and apply styles for mobile collapse */
-/* Make navbar sticky and apply styles for mobile collapse */
-/* Mobile-specific styles */
 @media (max-width: 768px) {
   .navbar-container {
     background-color: #124278;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     overflow-x: hidden;
     width: 100%;
@@ -186,7 +170,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -194,59 +177,60 @@
     z-index: 1020;
   }
 
-  /* Ensure logo-container is aligned to the left */
+  /* Logo container aligned to the left */
   .logo-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align logos to the left */
+    gap: 50%;
     width: 100%; /* Ensure it takes the full width */
-    padding: 10px 0;
-    text-align: left;
+    padding-left: -50px; /* Remove padding to ensure no extra space */
     position: relative;
     z-index: 1020;
   }
 
-  /* First logo adjusted to be aligned left */
+  /* First logo on the left */
   .logo {
     height: 70px; /* Adjust logo size */
     width: auto;
-    margin-left: 0; /* Ensure no margin on the left */
+    margin-left: -18%; /* Ensure no margin on the left */
+    position: relative; /* Ensure it stays in the document flow */
+    z-index: 1030; /* Higher z-index to ensure it's above the second logo */
+    
   }
 
-  /* Second logo in center, but keep the first logo aligned left */
+  /* Second logo centered */
   .second-logo {
     height: 70px;
     width: auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute; /* Absolute positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact center */
+    z-index: 1020; /* Lower z-index to ensure it's below the first logo */
   }
 
-  /* Emergency container needs a little adjustment */
+  /* Emergency container moved up */
   .emergency-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #F5F5F5;
+    color: #f5f5f5;
     gap: 5px;
     padding: 10px 0;
     width: 100%;
-    justify-content: center;
-    position: relative;
-    top: -15px; /* Slightly move up to ensure visibility */
-    z-index: 1020; /* Ensure it appears above navbar */
+    margin-top: -5px; /* Move up further */
+    z-index: 1020;
   }
 
   .emergency-title {
     font-family: 'MyCustomFont13', sans-serif;
-    color: #F5F5F5;
-    font-size: large;
+    color: #f5f5f5;
+    font-size: 1.2rem; /* Use relative units */
   }
 
   .emergency-button {
     background-color: #f57c00;
     color: #ffffff;
-    padding: 15px 20px;
+    padding: 10px 15px; /* Slightly smaller padding for mobile */
     margin-top: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -267,35 +251,44 @@
     height: 25px;
     cursor: pointer;
     z-index: 1020; /* Ensures it's above the menu */
-    margin-left: auto; /* Position the hamburger icon to the right of Home */
+    
   }
 
   .hamburger div {
     width: 100%;
     height: 5px;
-    background-color: #000000; /* Black hamburger icon */
+    background-color:#124278; /* Black hamburger icon */
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
   }
 
+  /* Mobile menu with smooth transition */
   .mobile-menu {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     padding: 20px 0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .navbar-contents {
+    margin-top: 20px;
   }
 
   .mobile-menu.show {
     display: flex;
+    max-height: 500px; /* Adjust based on content height */
   }
 
   .nav-item {
     color: #124278;
     font-family: 'MyCustomFont13', sans-serif;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1.2rem; /* Use relative units */
     font-weight: bold;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
     padding: 10px 20px;
@@ -308,9 +301,7 @@
 
   /* Hamburger icon transforms when clicked */
   .navbar-container.open .hamburger div:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 9px;
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
   .navbar-container.open .hamburger div:nth-child(2) {
@@ -318,8 +309,6 @@
   }
 
   .navbar-container.open .hamburger div:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -9px;
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }

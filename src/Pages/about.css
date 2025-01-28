@@ -96,37 +96,59 @@
 /* Responsive Design */
 
 /* Tablet */
-@media (max-width: 1024px) {
-  .about-section {
-    flex-direction: column;
-    width: 90%;
-  }
-
-  .text-content h2 {
-    font-size: 28px;
-  }
-
-  .text-content p {
-    font-size: 18px;
-  }
-}
-
-/* Mobile */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
   .about-container {
-    padding: 20px 10px;
+    padding: 20px 10px; /* Reduce padding for smaller screens */
+    gap: 20px; /* Reduce gap between sections */
   }
 
   .about-section {
-    width: 100%;
-    padding: 20px;
+    flex-direction: column; /* Stack content vertically */
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Auto height to fit content */
+    padding: 20px; /* Reduce padding */
+    border-radius: 16px; /* Slightly smaller rounded corners */
+    margin: 0 auto; /* Center the section */
+    gap: 10px; /* Reduce gap between elements */
+  }
+
+  /* Reduce Image Brightness for Transparency */
+  .about-section::before {
+    backdrop-filter: blur(5px); /* Slightly reduce blur for performance */
+  }
+
+  /* Text Content Styling for Mobile */
+  .text-content {
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .text-content h4 {
+    font-size: 16px; /* Smaller font size for mobile */
+    margin-bottom: 8px; /* Reduce margin */
   }
 
   .text-content h2 {
-    font-size: 28px;
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-top: 20px; /* Adjust margin for better spacing */
+    margin-bottom: 10px; /* Reduce margin */
   }
 
   .text-content p {
-    font-size: 18px;
+    font-size: 16px; /* Smaller font size for mobile */
+    line-height: 1.4; /* Adjust line height for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Slightly reduce shadow */
+  }
+
+  /* Hover Effects for Mobile */
+  .text-content:hover {
+    transform: none; /* Disable hover effects on mobile */
+    font-size: 16px; /* Reset font size */
+  }
+
+  /* Reverse Layout for Alternating Sections */
+  .about-section.reverse {
+    flex-direction: column; /* Stack content vertically */
   }
 }

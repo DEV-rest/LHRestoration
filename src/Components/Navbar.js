@@ -29,6 +29,11 @@ const Navbar = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
+  // Close the menu when a nav link is clicked
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className={`navbar-container ${shrink ? "shrink" : ""} ${menuOpen ? "open" : ""}`}>
       <div className="top-bar">
@@ -45,27 +50,28 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Icon (Mobile Only) */}
+      
+
+      <div className="navbar-contents">
       <div className="hamburger" onClick={toggleMenu}>
         <div></div>
         <div></div>
         <div></div>
       </div>
-
-      <div className="navbar-contents">
         <div className="nav-links">
           {/* Home link always visible */}
-          <Link to="/" className="nav-item home-item">
+          <Link to="/" className="nav-item home-item" onClick={closeMenu}>
             Home
           </Link>
           {/* Hidden links when menu is not open */}
           <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-            <Link to="/our-work" className="nav-item">
+            <Link to="/our-work" className="nav-item" onClick={closeMenu}>
               Services
             </Link>
-            <Link to="/about-3" className="nav-item">
+            <Link to="/about-3" className="nav-item" onClick={closeMenu}>
               About
             </Link>
-            <Link to="/members" className="nav-item">
+            <Link to="/members" className="nav-item" onClick={closeMenu}>
               Contact
             </Link>
           </div>
